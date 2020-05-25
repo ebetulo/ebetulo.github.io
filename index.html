@@ -62,23 +62,18 @@
             ).addTo(map_id);
         
     
-            var circle_marker_1 = L.circleMarker(
+            var circle_marker_berlin = L.circleMarker(
                 [52.52, 13.405],
                 {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.775238095238095, "stroke": true, "weight": 3}
             ).addTo(map_id);
         
     
-        var popup_berlin = L.popup({"maxWidth": "100%"});
-
+            var popup_berlin = L.popup({"maxWidth": "100%"});
         
-            var i_frame_dc18dc98ce804c79a675c9558348b7ae = '<img src="Berlin.png"/>';
-            popup_berlin.setContent(i_frame_dc18dc98ce804c79a675c9558348b7ae);
+            var berlinContent = '<img src="Berlin.png"/>';
+            popup_berlin.setContent(berlinContent);
 
-        circle_marker_1.bindPopup(popup_berlin)
-        ;
-
-        
-    
+            circle_marker_berlin.bindPopup(popup_berlin);
     
             var circle_marker_2 = L.circleMarker(
                 [48.1351, 11.582],
