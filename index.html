@@ -51,10 +51,6 @@
                     scrollWheelZoom: false,
                 }
             );
-
-            
-
-        
     
             var tile_layer_id = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -90,28 +86,22 @@
 
         circle_marker_2.bindPopup(popup_münchen)
         ;
-
-        
-    
-    
             var circle_marker_95588a2abff04682b727a3b58dd1b7e4 = L.circleMarker(
                 [50.1109, 8.6821],
                 {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.12952380952381, "stroke": true, "weight": 3}
             ).addTo(map_id);
         
     
-        var popup_c73ba37869c149f1a08b9af5b8c54230 = L.popup({"maxWidth": "100%"});
+        var popup_frankfurt = L.popup({"maxWidth": "100%"});
 
         
-            var i_frame_b7be2d5734d947019fd5de0a67a8c8e4 = 
-            popup_c73ba37869c149f1a08b9af5b8c54230.setContent(i_frame_b7be2d5734d947019fd5de0a67a8c8e4);
+            var frankfurtContent = '<img src="Frankfurt am Main.png"/ width="450" height="405">'; 
+            popup_frankfurt.setContent(frankfurtContent);
         
 
-        circle_marker_95588a2abff04682b727a3b58dd1b7e4.bindPopup(popup_c73ba37869c149f1a08b9af5b8c54230)
+        circle_marker_95588a2abff04682b727a3b58dd1b7e4.bindPopup(popup_frankfurt)
         ;
 
-        
-    
     
             var circle_marker_4 = L.circleMarker(
                 [50.9375, 6.9603],
