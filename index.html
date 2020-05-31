@@ -107,18 +107,18 @@
                     float: left;
                 }
                 .top_cities {
-                    width: 33%;
-                    float: left;
+                    border-radius: 10px;
+                    background-color: #ffffff;
                 }
                 .city {
                     width: 100%;
-                    float: left;
                 }
                 .dashboard {
                     display: flex;
                     width: 100%;
                     padding: .6rem 1.5rem 0 1.5rem;
                     border-color: var(--clr-dark);
+                    text-align: center;
                 }
                 .jobseeker_type {
                     display: flex;
@@ -166,41 +166,52 @@
                 .trendline {
                     font-size: var(--fs-h3);
                     text-align: center;
+                    background-color: #ffffff;
+                    margin-left: 10px;
+                    border-radius: 10px;
                 }
                 .trendline p {
                     font-size: 15px;
-                    border-style: dashed;
-                    border-width:1.5px;
-                    border-color:black;
                     width: 450px;
                     height: 50px;
-                    padding:10px;
+                    padding: 10px;
                     margin-left: 40px;
                 }
                 .top_companies p {
                     font-size: 15px;
-                    border-style: dashed;
-                    border-width:1.5px;
-                    border-color:black;
+                    width: 450px;
+                    height: 50px;
+                    padding:10px;
+                    margin-right: 40px;
+                }                
+
+                .top_cities h2 {
+                    font-size: 15px;
                     width: 450px;
                     height: 50px;
                     padding:10px;
                     margin-right: 40px;
                 }
 
-                .top_cities h2 {
+                .top_cities p {
                     font-size: 15px;
-                    border-style: dashed;
-                    border-width:1.5px;
-                    border-color:black;
-                    width: 450px;
+                    width: 200px;
                     height: 50px;
                     padding:10px;
                     margin-right: 40px;
+                    margin-left: 120px;
                 }
                 .top_companies {
                     text-align: center;
+                    margin-right: 10px;
+                    border-radius: 10px;
                 }
+                .company_graph {
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                }
+
+                
 
                 button {
                     border-radius: 12px;
@@ -208,9 +219,60 @@
                     
                 }
                 button:hover {
-                background-color: var(--clr-accent);
-                color: white;
+                    background-color: var(--clr-accent);
+                    color: white;
                 }
+
+                #submit-button {
+                    border-radius: 12px;
+                    transition-duration: 0.3s;
+                }
+
+                #submit-button:hover {
+                    background-color: var(--clr-dark);
+                    color: white;
+                }
+                .form-control {
+                    width: 25%;
+                }
+
+                #fname #lname #email {
+                    width: 95%;
+                }
+
+                .contact-us {
+                    display: flex;
+                    width: 100%;
+                    padding: .6rem 1.5rem 0 1.5rem;
+                    border-color: var(--clr-dark);
+                }
+
+                #teamphoto {
+                    margin-left: 31%;
+                 
+                }
+
+                .techlabsteam {
+                    text-align: center;
+                    font-size: var(--fs-h2);
+                }
+
+                #top_companies_img {
+                    margin-right: 15%;
+                    margin-bottom: 5%;
+                }
+                .insights {
+                    background-color: #f4f4f4;
+                }
+
+                .contact-form {
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    opacity: 0.9;
+                    padding: 15px;
+                    margin-left: 10px;
+                }
+
             </style>
         
 </head>
@@ -238,25 +300,28 @@
                 <p> If you are employed, your industry is not heavily affected by the crisis and you’re happy at work, then relax. Wash your hands and stay in your home office. :) However, if you are in one of the above categories or feel like there are less jobs being posted and that not many positions are entry level, read on to observe the impact of the coronavirus on the job market, and gather some insights. </p>
 
             </section>
-            <section id="insights"> 
+            <section id="insights" class="insights"> 
             <p class="header"><strong>Where to look for a job in Germany right now?</strong></p>
             <div class="dashboard">
-                <div class="top_companies"><p><strong>Most active companies looking for you right now</strong></p><br>
-                <img src=https://i.postimg.cc/6qYbfSHS/top-companies.png style="vertical-align: bottom; width: 50vh;">
-                <div class="top_cities">
-                    <h2>
-                        <strong>Top 3 Cities</strong> 
-                    </h2>
-                    <div class="city">
-                        <p>Berlin</p>
+                <div class="top_companies">
+                    <div class="company_graph">
+                        <p><strong>Most active companies looking for you right now</strong></p><br>
+                        <img src=https://i.postimg.cc/6qYbfSHS/top-companies.png id="top_companies_img" style="vertical-align: bottom; width: 50vh;">
                     </div>
-                    <div class="city">
-                        <p>München</p>
+                    <div class="top_cities">
+                        <h2>
+                            <strong>Top 3 Cities</strong><br>Average number of jobs posted daily
+                        </h2>
+                        <div class="city">
+                            <p>Berlin - 697</p>
+                        </div>
+                        <div class="city">
+                            <p>München - 456</p>
+                        </div>
+                        <div class="city">
+                            <p>Hamburg - 424</p>
+                        </div> 
                     </div>
-                    <div class="city">
-                        <p>Hamburg</p>
-                    </div> 
-                </div>
                 </div>
                 <div class="folium-map" id="map_id" ></div>
                 <div class="trendline"><p><strong>How job openings have developed over the past two weeks</strong> </p><br>
@@ -273,11 +338,12 @@
                     <img id="vollzeit" src="https://i.postimg.cc/k5DkTWLG/daily-new-jobs.png" width="100%" height="75%"></div>
             </div>
             
-            
             </section>
 
             <section id="contact"> 
-            <h2>Interested to see this in your country?</h2>
+            <div class="contact-us">
+            <div class="contact-form">
+            <h2><strong>Interested to see this in your country?</strong> </h2>
             <p>Help us launch this in your country.</p>
             <form>
                 <label for="fname">First name:</label><br>
@@ -285,7 +351,7 @@
                 <label for="lname">Last name:</label><br>
                 <input type="text" id="lname" name="lname" placeholder="Please write your last name here" required><br>
                 <label for="email">E-mail:</label><br>
-                <input type="text" id="email" name="email" placeholder="Please write your e-mail here" required><br>
+                <input type="text" id="email" name="email" placeholder="Please write your e-mail" required><br>
                 <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>      
                 <select id="country" name="country" class="form-control">
                 <option value="Afghanistan">Afghanistan</option>
@@ -536,8 +602,14 @@
 
                 <label for="message">Message:</label><br>
                 <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Please enter message here..."></textarea><br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submit-button">
             </form>
+            </div>  
+            <div class="the-team">
+            <p class="techlabsteam">TechLabs 2020 - Team Job Market</p>
+            <img id="teamphoto" src="https://i.postimg.cc/wMgh8FBg/us.png" width="60%" height="80%">
+            </div>
+        </div>
         </section>
 </body>
 </html>
